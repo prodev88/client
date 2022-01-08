@@ -22,7 +22,7 @@ class EditProject extends Component {
   componentDidMount() {
     // console.log(this.props);
     axios
-      .get("/ongoing/" + this.props.p.id)
+      .get("https://damp-spire-14492.herokuapp.com/ongoing/" + this.props.p.id)
       .then((response) => {
         this.setState({
           projectName: response.data.projectName,
@@ -57,7 +57,11 @@ class EditProject extends Component {
 
     // console.log(project);
 
-    axios.post("/ongoing/update/" + this.props.p.id, project);
+    axios.post(
+      "https://damp-spire-14492.herokuapp.com/ongoing/update/" +
+        this.props.p.id,
+      project
+    );
     // .then((res) => console.log(res.data));
 
     // window.location = "/";

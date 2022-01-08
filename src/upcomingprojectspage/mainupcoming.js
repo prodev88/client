@@ -7,7 +7,7 @@ function Mainupcom() {
 
   //main list
   useEffect(() => {
-    fetch("/getfull")
+    fetch("https://damp-spire-14492.herokuapp.com/getfull")
       .then((response) => response.json())
       .then((data) => {
         settodol(data);

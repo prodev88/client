@@ -32,7 +32,7 @@ const Signup = (props) => {
     } else {
       e.preventDefault();
       localStorage.setItem("emid", em);
-      fetch("/postdata", {
+      fetch("https://damp-spire-14492.herokuapp.com/postdata", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

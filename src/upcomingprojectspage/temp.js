@@ -8,7 +8,7 @@ function Temp(props) {
   //removing function
 
   function rem(id) {
-    fetch("/del/" + id, {
+    fetch("https://damp-spire-14492.herokuapp.com/del/" + id, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     })

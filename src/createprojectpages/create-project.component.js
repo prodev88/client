@@ -38,7 +38,7 @@ export default class CreateProject extends Component {
 
     // console.log(project);
 
-    axios.post("/ongoing/add", project);
+    axios.post("https://damp-spire-14492.herokuapp.com/ongoing/add", project);
     // .then((res) => console.log(res.data));
     this.props.change();
   }

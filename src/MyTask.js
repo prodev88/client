@@ -10,7 +10,7 @@ function MyTask() {
   useEffect(() => {
     // console.log("ece " + sub.projectid + " " + localStorage.getItem("emid"));
     axios
-      .get("/my/tasks", {
+      .get("https://damp-spire-14492.herokuapp.com/my/tasks", {
         params: {
           mail: localStorage.getItem("emid"),
           projectid: sub.projectid,

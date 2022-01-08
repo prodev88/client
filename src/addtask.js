@@ -13,7 +13,7 @@ function AddTask() {
     // console.log("submit option");
     e.preventDefault();
 
-    fetch("/tasks/add", {
+    fetch("https://damp-spire-14492.herokuapp.com/tasks/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

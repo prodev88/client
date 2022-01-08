@@ -8,7 +8,7 @@ function ViewTask() {
   const [tasks_arr, settasks_arr] = useState([]);
   useEffect(() => {
     // console.log("/tasks/" + sub.projectid);
-    fetch("/tasks/" + sub.projectid)
+    fetch("https://damp-spire-14492.herokuapp.com/tasks/" + sub.projectid)
       .then((response) => response.json())
       .then((data) => {
         settasks_arr(data);
@@ -18,7 +18,7 @@ function ViewTask() {
   }, []);
   // function doquery(emp_email) {
   //   return new Promise(function (resolve, reject) {
-  //     fetch("/users/" + emp_email)
+  //     fetch("https://damp-spire-14492.herokuapp.com/users/" + emp_email)
   //       //.then((response) => response.json())
   //       .then((data) => {
   //         //user_row = "efg";
@@ -38,7 +38,9 @@ function ViewTask() {
     return tasks_arr.map((currenttask) => {
       // console.log(tasks_arr);
 
-      fetch("/users/" + currenttask.emp_email)
+      fetch(
+        "https://damp-spire-14492.herokuapp.com/users/" + currenttask.emp_email
+      )
         .then((response) => response.json())
         .then((data) => {
           //setUser_row(data);

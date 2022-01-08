@@ -18,7 +18,7 @@ function Upcom(props) {
       return;
     } else {
       e.preventDefault();
-      fetch("/postproject", {
+      fetch("https://damp-spire-14492.herokuapp.com/postproject", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

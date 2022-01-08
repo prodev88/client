@@ -10,7 +10,10 @@ function Myproject() {
   const nav = useNavigate();
   const [sublist, setsublist] = useState([]);
   useEffect(() => {
-    fetch("/getsub/" + localStorage.getItem("emid"))
+    fetch(
+      "https://damp-spire-14492.herokuapp.com/getsub/" +
+        localStorage.getItem("emid")
+    )
       .then((response) => response.json())
       .then((data) => {
         setsublist(data);

@@ -22,7 +22,7 @@ const Signin = () => {
     if (em.length === 0 || pa.length === 0) {
       alert("It cant be empty");
     } else {
-      fetch("/check", {
+      fetch("https://damp-spire-14492.herokuapp.com/check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
